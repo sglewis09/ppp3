@@ -4,7 +4,9 @@
 // Example 1.2 - page 18
 // Outputs the message "Hello World!" to the screen
 
-import std;
+//--- Comment out and use include until If figure how to compile with modules
+// import std;
+#include "PPPheaders.h"
 
 int main()		// C++ programs start by executing the function main
 {
