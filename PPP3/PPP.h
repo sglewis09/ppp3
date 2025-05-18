@@ -9,6 +9,3 @@ using namespace std;
 #define string Checked_string
 #define span Checked_span
 
-
-
-
