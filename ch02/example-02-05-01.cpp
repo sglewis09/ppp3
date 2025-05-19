@@ -10,7 +10,8 @@
 
 int main()
 {
-	string previous;	// previous word; initialized to ""
+	// strings are initialized to "" by default
+	string previous;	// previous word
 	string current;		// current word
 	
 	while (cin >> current) {		// read a stream of words
