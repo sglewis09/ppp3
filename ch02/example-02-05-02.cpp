@@ -1,7 +1,7 @@
 // Programming: Principles and Practice Using C++ - 3rd Edition
 // by Bjarne Stroustrup
 // 
-// Example 2.5.1 - page 38
+// Example 2.4.1 - page 38
 // detect repeated words
 
 //--- Comment out and use include until If figure how to compile with modules
