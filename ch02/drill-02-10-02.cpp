@@ -1,4 +1,4 @@
-// Programming: Principles and Practice Using C++ - 3rd Edition
+g/ Programming: Principles and Practice Using C++ - 3rd Edition
 // by Bjarne Stroustrup
 // 
 // Drill 2.10.02
@@ -13,7 +13,7 @@
 //		"Enter the name of the person you want to write to" and
 //		change the output to "Dear first_name,". Don't forget the
 //		comma.
-//	[2] Add an introductory line or two, like "How are you? I am
+//	[2]	Add an introductory line or two, like "How are you? I am
 //		fine. I miss you." Be sure to indent the first line. Add a few
 //		more lines of your choosing - it's your letter.
 //
