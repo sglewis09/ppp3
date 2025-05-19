@@ -1,7 +1,7 @@
 // Programming: Principles and Practice Using C++ - 3rd Edition
 // by Bjarne Stroustrup
 // 
-// Drill 2.10.01
+// Drill 2.10.02
 // After each step of this drill, run your program to make sure it is
 // really doing what you expect it to. Keep a list of what mistakes
 // you make so that you can try to avoid those in the future.
