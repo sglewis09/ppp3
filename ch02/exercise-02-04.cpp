@@ -19,7 +19,7 @@ int main()
 	int val1(0), val2(0);
 	cin >> val1 >> val2;
 
-	cout << "The two intges you enterd are"
+	cout << "The two intgers you enterd are "
 		<< val1 << " and " << val2 << '\n';
 	cout << val1 << val2;
 
@@ -40,7 +40,7 @@ int main()
 		cout << "The smaller value is " << val1 << '\n';
 		cout << "The larger value is " << val2 << '\n';
 	} else {
-		cout << "The smaller value is " << valj << '\n';
+		cout << "The smaller value is " << val1 << '\n';
 		cout << "The larger value is " << val2 << '\n';
 	}
 }
