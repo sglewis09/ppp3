@@ -8,7 +8,7 @@
 // programs for some inputs of your choice. Are the results the same? Should
 // they be? What's the difference?
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

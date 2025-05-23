@@ -14,7 +14,7 @@
 //		change the output to "Dear first_name,". Don't forget the
 //		comma.
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

@@ -33,7 +33,7 @@
 //		Check your program to make sure it responds appropriately
 //		to each kind of value.
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

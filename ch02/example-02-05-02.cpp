@@ -4,7 +4,7 @@
 // Example 2.5.3 - page 40
 // detect repeated words
 
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

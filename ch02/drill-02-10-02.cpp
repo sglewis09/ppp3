@@ -17,7 +17,7 @@ g/ Programming: Principles and Practice Using C++ - 3rd Edition
 //		fine. I miss you." Be sure to indent the first line. Add a few
 //		more lines of your choosing - it's your letter.
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

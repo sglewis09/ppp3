@@ -7,7 +7,7 @@
 // program shoudl have a reasonable propmt for the user to enter a number of
 // miles. Hint: A mile is 1.609 kilometers.
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

@@ -35,7 +35,7 @@
 //	[6]	Add "Yours sincerely," followed by two blank lines for a
 //		signature, followed by your name
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

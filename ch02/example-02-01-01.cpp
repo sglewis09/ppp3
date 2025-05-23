@@ -4,7 +4,7 @@
 // Example 2.1 - page 30
 // Rread and write a first name
 
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

@@ -20,7 +20,7 @@
 //		store it in friend_name. Add a line to your letter: "Have you
 //		seen friend_name lately?"
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

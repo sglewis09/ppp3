@@ -8,7 +8,7 @@
 // determine the smaller, larger, sum, difference, product, and ratio of these
 // values and repot them to the user.j
 //
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 

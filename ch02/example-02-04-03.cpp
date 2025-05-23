@@ -4,7 +4,7 @@
 // Example 2.4.3 - page 36
 // read and compare names
 
-//--- Comment out and use include until If figure how to compile with modules
+//--- Comment out and use include until I figure how to compile with modules
 // import std;
 #include "PPPheaders.h"
 
