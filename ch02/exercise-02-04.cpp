@@ -18,23 +18,20 @@ int main()
 
 	int val1(0), val2(0);
 	cin >> val1 >> val2;
-
+ 
 	cout << "The two intgers you enterd are "
 		<< val1 << " and " << val2 << '\n';
-	cout << val1 << val2;
 
-	cout << val1 << " + " << val2 << " = " << val1*val2 << '\n';
-	cout << val1 << " - " << val2 << " = " << val1-val2 << '\n';
-	cout << val1 << " * " << val2 << " = " << val1*val2 << '\n';
-	cout << val1 << " / " << val2;
+	cout << val1 << "+" << val2 << "=" << val1*val2 << '\n';
+	cout << val1 << "-" << val2 << "=" << val1-val2 << '\n';
+	cout << val1 << "*" << val2 << "=" << val1*val2 << '\n';
 
     if (val2 == 0)
 		cout << "Error: divison by zero is undefined\n";
-	else
-		cout << val1 << " / " << val2 << " = " << val1/val2 << '\n';
-
-	cout << "The sum of " << val1 << " and " << val2 << " is " << val1+val2
-		<< '\n';
+	else {
+		cout << val1 << "/" << val2 << "=" << val1/val2 << '\n';
+		cout << val1 << "%" << val2 << "=" << val1%val2 << '\n';
+	}
 
 	if (val1 < val2) {
 		cout << "The smaller value is " << val1 << '\n';
