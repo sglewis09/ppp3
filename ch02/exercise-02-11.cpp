@@ -28,33 +28,33 @@
 
 int main()
 {
-	int penny_count(0);			// number of pennies
-	const int penny_value(1);	// the value of a penny (in cents)
+	int penny_count(0);				// number of pennies
+	constexpr int penny_value(1);	// the value of a penny (in cents)
 	cout << "How many pennies do you have? ";
 	cin >> penny_count;
 
-	int nickel_count(0);		// number of nickels
-	const int nickel_value(5);	// the value of a nickel (in cents)
+	int nickel_count(0);			// number of nickels
+	constexpr int nickel_value(5);	// the value of a nickel (in cents)
 	cout << "How many nickels do you have? ";
 	cin >> nickel_count;
 
-	int dime_count(0);			// number of dimes
-	const int dime_value(10);	// the value of a dime (in cents)
+	int dime_count(0);				// number of dimes
+	constexpr int dime_value(10);	// the value of a dime (in cents)
 	cout << "How many dimes do you have? ";
 	cin >> dime_count;
 
-	int quarter_count(0);			// number of quarters
-	const int quarter_value(25);	// the value of a quarter (in cents)
+	int quarter_count(0);				// number of quarters
+	constexpr int quarter_value(25);	// the value of a quarter (in cents)
 	cout << "How many quarters do you have? ";
 	cin >> quarter_count;
 
-	int half_dollar_count(0);			// number of half dollar coins
-	const int half_dollar_value(50);	// the value of a half dollar (in cents)
+	int half_dollar_count(0);				// number of half dollar coins
+	constexpr int half_dollar_value(50);	// the value of a half dollar (in cents)
 	cout << "How many half dollar coins do you have? ";
 	cin >> half_dollar_count;
 
-	int dollar_count(0);			// number of dollar coins
-	const int dollar_value(100);	// the value of a dollar (in cents)
+	int dollar_count(0);				// number of dollar coins
+	constexpr int dollar_value(100);	// the value of a dollar (in cents)
 	cout << "How many dollar coins do you have? ";
 	cin >> dollar_count;
 
