@@ -20,7 +20,7 @@ int main()
     char terminate;
 
     while (true) {
-        std::cout << "Enter two integers (or '|' to exit): ";
+        cout << "Enter two integers (or '|' to exit): ";
         
         if (!(cin >> num1 >> num2)) { 
             cin.clear(); // Clear the error flag
