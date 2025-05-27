@@ -1,7 +1,7 @@
 // Programming: Principles and Practice Using C++ - 3rd Edition
 // by Bjarne Stroustrup
 // 
-// Drill 3.2
+// Drill 3.5
 // Page 78
 // Go through this drill step by step. Do not try to speed up by skipping
 // steps. Test each step by entering at least three pairs of values - more
