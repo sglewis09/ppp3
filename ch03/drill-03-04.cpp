@@ -6,15 +6,15 @@
 // Go through this drill step by step. Do not try to speed up by skipping
 // steps. Test each step by entering at least three pairs of values - more
 // values would be better.
-// [1] Write a program that consists of a while-loop that (each time around the
-//     loop) reads in two ints and then prints them. Exit the program when a
-//     terminating '|' is entered.
-// [2] Change the program to write out "the smaller value is: " followed by the
-//     smaller of the numbers and "the larger value is: " followed by the
-//     larger value.
-// [3] Augment the program so that it writes the line "the numbers are equal"
-//     (only) if they are equal.
-// [4] Change teh program so that it uses doubles instead of ints.
+//  [1] Write a program that consists of a while-loop that (each time around
+//      the loop) reads in two ints and then prints them. Exit the program
+//      when a terminating '|' is entered.
+//  [2] Change the program to write out "the smaller value is: " followed by
+//      the smaller of the numbers and "the larger value is: " followed by the
+//      larger value.
+//  [3] Augment the program so that it writes the line "the numbers are equal"
+//      (only) if they are equal.
+//  [4] Change teh program so that it uses doubles instead of ints.
 //
 //--- Comment out and use include until I figure how to compile with modules
 // import std;

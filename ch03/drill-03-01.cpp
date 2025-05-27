@@ -6,9 +6,9 @@
 // Go through this drill step by step. Do not try to speed up by skipping
 // steps. Test each step by entering at least three pairs of values - more
 // values would be better.
-// [1] Write a program that consists of a while-loop that (each time around the
-//     loop) reads in two ints and then prints them. Exit the program when a
-//     terminating '|' is entered.
+//  [1] Write a program that consists of a while-loop that (each time around
+//      the loop) reads in two ints and then prints them. Exit the program
+//      when a terminating '|' is entered.
 
 //--- Comment out and use include until I figure how to compile with modules
 // import std;
