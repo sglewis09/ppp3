@@ -1,7 +1,7 @@
 // Programming: Principles and Practice Using C++ - 3rd Edition
 // by Bjarne Stroustrup
 // 
-// Drill 3.7 (Also solves drill 3.8)
+// Drill 3.9
 // Page 78
 // Go through this drill step by step. Do not try to speed up by skipping
 // steps. Test each step by entering at least three pairs of values - more
@@ -32,6 +32,11 @@
 //      a space).
 //  [8] Reject values without units or with "illegal" represntations of units,
 //      such as y, yard, meter, km, and gallons.
+//  [9] Keep track of the sum of values entered (as well as the smallest and
+//      the largest) and the number of values entered. When the loop ends,
+//      print the smallest, the largest, the number of values, and the sum of
+//      values. Note that to keep the sum, you have to decide on a unit for
+//      that sum; use meters.
 //
 //--- Comment out and use include until I figure how to compile with modules
 // import std;
@@ -41,8 +46,10 @@ int main()
 {
     double num(0);		// number of units
 	string unit;		// unit of measure (only cm, i, ft, m are supported)
-	double cm(0);		// units converted to cm
+	double m(0);		// units converted to cm
     char terminate;		// place to store termination character
+	double sum(0);		// sum of all values entered (in meters)
+	int	count(0);		// the total number of values entered
 	
 	// initialize smallest with the largest value allowed for a double
 	double smallest(numeric_limits<double>::max());
@@ -52,13 +59,13 @@ int main()
 
 	// set conversion factors to convert all values to cm so they can
 	// be compaired
-	constexpr double cm_per_in(2.54);
-	constexpr double cm_per_ft(cm_per_in*12);
-	constexpr double cm_per_m(100);
+	constexpr double m_per_cm(0.01);
+	constexpr double m_per_in(0.0254);
+	constexpr double m_per_ft(m_per_in*12);
 
     while (true) {
         cout << "Enter a floating-point number followed by one these units:\n"
-			<< "cm, in, ft, m (or just '|' by itself, with no number "
+			<< "c, in, ft, m (or just '|' by itself, with no number "
 			<< "to exit): ";
         
         if (!(cin >> num >> unit)) { 
@@ -70,7 +77,7 @@ int main()
                 break;
             } else {
                 cout << "Invalid input floating-point number, followed "
-					<< "by cm, in, ft, m or '|' to end.\n";
+					<< "by c, in, ft, m or '|' to end.\n";
 
 				// Discard invalid input
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -79,28 +86,33 @@ int main()
             cout << "You entered: " << num << ' ' << unit << '\n';
 
 			if (unit == "cm")
-				cm = num;
+				m = m_per_cm * num;
 			else if (unit == "in")
-				cm = cm_per_in * num;
+				m = m_per_in * num;
 			else if (unit == "ft")
-				cm = cm_per_ft * num;
+				m = m_per_ft * num;
 			else if (unit == "m")
-				cm = cm_per_m * num;
+				m = m_per_m * num;
 			else {
-				cout << "Invalid unit entered. Only cm, in, ft, or m "
+				cout << "Invalid unit entered. Only c, in, ft, or m "
 					<< " are allowed.\n"
 					<< "Please try again...\n\n";
 				continue;
 			}
 
-			cout << num << ' ' << unit << " is equal to " << cm << "cm\n";
+			cout << num << ' ' << unit << " is equal to " << m << "m\n";
 
-			if (cm < smallest)
-				smallest = cm;
+			sum += m;
 
-			if (cm > largest)
-				largest = cm;
+			if (m < smallest)
+				smallest = m;
 
+			if (m > largest)
+				largest = m;
+
+			cout << "You have entered " << ++count << " values so far.\n";
+			cout << "The sum of the values you have entered is "
+				<< sum << "m.\n";
 			cout << "The smallest value entered so far is "
 				<< smallest << "cm.\n";
 			cout << "The largest value entered so far is "
