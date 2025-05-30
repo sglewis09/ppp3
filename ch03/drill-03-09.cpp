@@ -83,7 +83,7 @@ int main()
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         } else {
-            cout << "You entered: " << num << ' ' << unit << '\n';
+            cout << "You entered: " << num << unit << '\n';
 
 			if (unit == "cm")
 				m = m_per_cm * num;
@@ -92,7 +92,7 @@ int main()
 			else if (unit == "ft")
 				m = m_per_ft * num;
 			else if (unit == "m")
-				m = m_per_m * num;
+				m = num;
 			else {
 				cout << "Invalid unit entered. Only c, in, ft, or m "
 					<< " are allowed.\n"
@@ -114,9 +114,9 @@ int main()
 			cout << "The sum of the values you have entered is "
 				<< sum << "m.\n";
 			cout << "The smallest value entered so far is "
-				<< smallest << "cm.\n";
+				<< smallest << "m.\n";
 			cout << "The largest value entered so far is "
-				<< largest << "cm.\n\n";
+				<< largest << "m.\n\n";
 		}
     }
 
