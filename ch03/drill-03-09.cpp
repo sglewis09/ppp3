@@ -65,7 +65,7 @@ int main()
 
     while (true) {
         cout << "Enter a floating-point number followed by one these units:\n"
-			<< "c, in, ft, m (or just '|' by itself, with no number "
+			<< "cm, in, ft, m (or just '|' by itself, with no number "
 			<< "to exit): ";
         
         if (!(cin >> num >> unit)) { 
@@ -77,7 +77,7 @@ int main()
                 break;
             } else {
                 cout << "Invalid input floating-point number, followed "
-					<< "by c, in, ft, m or '|' to end.\n";
+					<< "by cm, in, ft, m or '|' to end.\n";
 
 				// Discard invalid input
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -94,7 +94,7 @@ int main()
 			else if (unit == "m")
 				m = num;
 			else {
-				cout << "Invalid unit entered. Only c, in, ft, or m "
+				cout << "Invalid unit entered. Only cm, in, ft, or m "
 					<< " are allowed.\n"
 					<< "Please try again...\n\n";
 				continue;
