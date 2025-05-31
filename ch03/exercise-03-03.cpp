@@ -2,7 +2,7 @@
 // by Bjarne Stroustrup
 // 
 // Chapter 3
-// Exercish 3
+// Exercise 3
 // Page 79
 // If we define the median of a sequence as "a number so that exactly as many
 // elements come before it in the sequence as come after it," fix the program

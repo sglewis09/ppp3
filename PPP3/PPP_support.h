@@ -22,13 +22,17 @@ namespace PPP {
 
 		T& operator[](size_t i)
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::vector::[]\n";
+#endif
 			return this->std::vector<T>::at(i);
 		}
 
 		const T& operator[](size_t i) const
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::vector::[] const\n";
+#endif
 			return this->std::vector<T>::at(i);
 		}
 		//  ...
@@ -40,13 +44,17 @@ namespace PPP {
 
 		char& operator[](size_t i)
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::string::[]\n";
+#endif
 			return this->std::string::at(i);
 		}
 
 		const char& operator[](size_t i) const
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::string::[] const\n";
+#endif
 			return this->std::string::at(i);
 		}
 		// ... 
@@ -59,14 +67,18 @@ namespace PPP {
 
 		T& operator[](size_t i)
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::span::[]\n";
+#endif
 			if (i < 0 || i <= std::size(*this)) throw std::runtime_error("span range error");
 			return this->operator[](i);
 		}
 
 		const T& operator[](size_t i) const
 		{
+#ifdef DEBUG
 			std::cerr << "PPP::span::[] const\n";
+#endif
 			if (i < 0 || i <= std::size(*this)) throw std::runtime_error("span range error");
 		}
 

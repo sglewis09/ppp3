@@ -2,7 +2,7 @@
 // by Bjarne Stroustrup
 // 
 // Chapter 3
-// Exercish 2
+// Exercise 2
 // Page 79
 // Write a program that reads a string from input and then, for each character
 // read, prints out the character and its integer value on a line.
