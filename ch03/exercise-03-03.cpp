@@ -18,6 +18,25 @@ int main()
 	// read some temperatures into a vector
 	vector<double> temps;	// temperatures
 
+	cout << "Enter a list of temperaturs. End with <ctrl>D:\n";
 	for (double temp; cin >> temp; )	// read into temp
 		temps.push_back(temp);			// put temp into vector
+	
+	cout << "\nHere is the contents of the unsorted vector:\n";
+	for (double d : temps)
+		cout << d << '\n';
+
+	ranges::sort(temps);
+	
+	cout << "\nHere is the contents of the sorted vector:\n";
+	for (double d : temps)
+		cout << d << '\n';
+
+	double min = temps[0];
+	double max = temps[temps.size()-1];
+	double mean = min+(max-min)/2;
+
+	cout << "\nThe smallest temperature is " << min << '\n';
+	cout << "The largest temperature is " << max << '\n';
+	cout << "The mean is " << mean << '\n';
 }
