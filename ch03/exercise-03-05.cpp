@@ -10,8 +10,7 @@
 // program should be able to identify the number after aksing no modules than
 // seven questions.
 
-#include <ostream>
-// #define DEBUG
+//  #define DEBUG
 
 // Only use modules if supported by the compiler
 #if __cpp_modules
