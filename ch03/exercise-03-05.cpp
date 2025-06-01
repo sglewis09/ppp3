@@ -13,9 +13,12 @@
 #include <ostream>
 // #define DEBUG
 
-//--- Comment out and use include until I figure how to compile with modules
-// import std;
+// Only use modules if supported by the compiler
+#if __cpp_modules
+import std;
+#else
 #include "PPPheaders.h"
+#endif
 
 // Process the answer to y/n questions
 bool yes_no_question(string question) {
