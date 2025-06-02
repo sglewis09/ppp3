@@ -20,6 +20,13 @@ import std;
 #include "PPPheaders.h"
 #endif
 
+string toLower(const string &str) {
+  string lowerStr = str;
+  transform(lowerStr.begin(), lowerStr.end(), lowerStr.begin(),
+            [](unsigned char c) { return tolower(c); });
+  return lowerStr;
+}
+
 int main() {
   vector<string> numbers = {"zero", "one", "two",   "three", "four",
                             "five", "six", "seven", "eight", "nine"};
@@ -28,6 +35,8 @@ int main() {
   cout << "Enter a digit (0-9) or a spelled-out number: ";
 
   while (cin >> input) {
+    input = toLower(input);
+
     // Try converting from digit to supported
     if (isdigit(input[0]) && input.size() == 1) {
       int digit = input[0] - '0';
