@@ -30,7 +30,10 @@ import std;
 int main() {
   long unsigned int current_payment = 1;
   long unsigned int total_payment = 0;
-  ;
+
+  // print thousand seperators
+  locale loc("");
+  cout.imbue(loc);
 
   for (int i = 1; i <= 64; i++) {
     total_payment += current_payment;
