@@ -39,7 +39,7 @@ int main() {
     total_payment += current_payment;
 
     cout << "Payment #" << i << "=" << current_payment
-         << " for a total_payment of " << total_payment << endl;
+         << " for a total payment of " << total_payment << endl;
 
     current_payment *= 2;
   }
