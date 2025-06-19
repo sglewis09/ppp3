@@ -10,6 +10,7 @@
 // mode of a set of positive integers.
 
 // Only use modules if supported by the compiler
+#include <tuple>
 #if __cpp_modules
 import std;
 #else
@@ -17,76 +18,37 @@ import std;
 #endif
 
 int main() {
-  double num(0);  // number of units
-  string unit;    // unit of measure (only cm, i, ft, m are supported)
-  double m(0);    // units converted to cm
-  char terminate; // place to store termination character
-  double sum(0);  // sum of all values entered (in meters)
-  int count(0);   // the total number of values entered
-
-  // initialize smallest with the largest value allowed for a double
-  double smallest(numeric_limits<double>::max());
-
-  // initialize largest with the smallest value allowed for double
-  double largest(numeric_limits<double>::lowest());
-
-  // set conversion factors to convert all values to cm so they can
-  // be compaired
-  constexpr double m_per_cm(0.01);
-  constexpr double m_per_in(0.0254);
-  constexpr double m_per_ft(m_per_in * 12);
+  constexpr char term_char = '|'; // What char is being used to stop program
+  int number = 0;                 // Current number entered by user
+  char terminate = '\0';          // Storage for termination character check
+  vector<int> numbers;            // Create storage for a list of integers
 
   while (true) {
-    cout << "Enter a floating-point number followed by one these units:\n"
-         << "cm, in, ft, m (or just '|' by itself, with no number "
-         << "to exit): ";
+    cout << "Enter an integer (or '|' to exit): ";
 
-    if (!(cin >> num >> unit)) {
+    if (!(cin >> number)) {
       cin.clear(); // Clear the error flag
       cin >> terminate;
 
-      if (terminate == '|') {
-        cout << "Exiting program...\n";
+      if (terminate == term_char) {
+        cout << "Exiting program..." << endl;
         break;
       } else {
-        cout << "Invalid input floating-point number, followed "
-             << "by cm, in, ft, m or '|' to end.\n";
+        cout << "Invalid input. Please enter a valid integer or \'" << term_char
+             << "\' to terminate." << endl;
 
         // Discard invalid input
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
       }
     } else {
-      cout << "You entered: " << num << unit << '\n';
-
-      if (unit == "cm")
-        m = m_per_cm * num;
-      else if (unit == "in")
-        m = m_per_in * num;
-      else if (unit == "ft")
-        m = m_per_ft * num;
-      else if (unit == "m")
-        m = num;
-      else {
-        cout << "Invalid unit entered. Only cm, in, ft, or m "
-             << " are allowed.\n"
-             << "Please try again...\n\n";
-        continue;
-      }
-
-      cout << num << ' ' << unit << " is equal to " << m << "m\n";
-
-      sum += m;
-
-      if (m < smallest)
-        smallest = m;
-
-      if (m > largest)
-        largest = m;
-
-      cout << "You have entered " << ++count << " values so far.\n";
-      cout << "The sum of the values you have entered is " << sum << "m.\n";
-      cout << "The smallest value entered so far is " << smallest << "m.\n";
-      cout << "The largest value entered so far is " << largest << "m.\n\n";
+      numbers.push_back(number);
     }
   }
+
+  if (numbers.length() < 1) {
+    cerr << "The list of integers is empty" << endl;
+    exit(1);
+  }
+
+  sort(numbers.begin(), numbers.end());
 }
