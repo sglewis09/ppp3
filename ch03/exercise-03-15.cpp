@@ -23,9 +23,8 @@ import std;
 #undef vector
 #endif
 
+// Assumes that nums has already been sortted
 int get_mode(vector<int> nums) {
-  ranges::sort(nums);
-
   int mode(nums[0]);
   int count(1);
   int current_count(1);
@@ -79,8 +78,12 @@ int main() {
   }
 
   if (!numbers.empty()) {
+    ranges::sort(numbers);
     int mode = get_mode(numbers);
+
+    cout << "Min:\t" << numbers[0] << endl;
     cout << "Mode:\t" << mode << endl;
+    cout << "Max:\t" << numbers[numbers.size() - 1] << endl;
   } else {
     cout << "No data!\n";
   }
