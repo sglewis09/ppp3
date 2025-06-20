@@ -10,6 +10,7 @@
 // mode of a set of positive integers.
 
 // Only use modules if supported by the compiler
+#include <limits>
 #include <tuple>
 #if __cpp_modules
 import std;
@@ -17,38 +18,70 @@ import std;
 #include "PPPheaders.h"
 #endif
 
-int main() {
-  constexpr char term_char = '|'; // What char is being used to stop program
-  int number = 0;                 // Current number entered by user
-  char terminate = '\0';          // Storage for termination character check
-  vector<int> numbers;            // Create storage for a list of integers
+// remove redefinition of std::vector
+#ifdef vector
+#undef vector
+#endif
 
+int get_mode(vector<int> nums) {
+  ranges::sort(nums);
+
+  int mode(nums[0]);
+  int count(1);
+  int current_count(1);
+  long unsigned int i(1);
+
+  while (i < nums.size()) {
+    if (nums[i - 1] == nums[i]) {
+      ++current_count;
+    } else {
+      if (current_count > count) {
+        mode = nums[i - 1];
+        count = current_count;
+      }
+      current_count = 1;
+    }
+    ++i;
+  }
+
+  if (current_count > count) {
+    mode = nums[i - 1];
+  }
+
+  return mode;
+}
+
+int main() {
+  int n(0);            // Current number entered by user
+  vector<int> numbers; // Create storage for a list of integers
+  char term('\0');
+
+  // Fill in a list of integers
   while (true) {
     cout << "Enter an integer (or '|' to exit): ";
 
-    if (!(cin >> number)) {
+    if (!(cin >> n)) {
       cin.clear(); // Clear the error flag
-      cin >> terminate;
+      cin >> term;
 
-      if (terminate == term_char) {
-        cout << "Exiting program..." << endl;
+      if (term == '|') {
+        cout << "Exiting program...\n";
         break;
       } else {
-        cout << "Invalid input. Please enter a valid integer or \'" << term_char
-             << "\' to terminate." << endl;
+        cout << "Invalid input. Please enter a valid integer or \'|\' to end\n";
 
         // Discard invalid input
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
       }
     } else {
-      numbers.push_back(number);
+      numbers.push_back(n);
     }
   }
 
-  if (numbers.length() < 1) {
-    cerr << "The list of integers is empty" << endl;
-    exit(1);
+  if (!numbers.empty()) {
+    int mode = get_mode(numbers);
+    cout << "Mode:\t" << mode << endl;
+  } else {
+    cout << "No data!\n";
   }
-
-  sort(numbers.begin(), numbers.end());
 }
