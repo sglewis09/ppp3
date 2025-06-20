@@ -1,13 +1,15 @@
+#include <algorithm>
 #include <iostream>
+#include <iterator>
+#include <ranges>
 #include <vector>
-// #include <algorithm>
 
 int get_mode(std::vector<int> vec) {
   std::ranges::sort(vec);
   int mode = vec[0];
   int count = 1;
   int curr_count = 1;
-  int i = 1;
+  long unsigned int i = 1;
 
   while (i < vec.size()) {
     if (vec[i - 1] == vec[i]) {
