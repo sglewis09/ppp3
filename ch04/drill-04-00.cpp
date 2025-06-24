@@ -12,7 +12,7 @@
 
 int main() {
   try {
-    // Insert code chapter
+    // Insert code here
     return 0;
   }
 

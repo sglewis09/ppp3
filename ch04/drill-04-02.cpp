@@ -12,8 +12,8 @@
 
 int main() {
   try {
-    cout << "Success!\n;
-        return 0;
+    cout << "Success!\n";
+    return 0;
   }
 
   catch (exception &e) {
