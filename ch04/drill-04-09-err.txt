@@ -1,0 +1,8 @@
+drill-04-09.cpp: In function ‘int main()’:
+drill-04-09.cpp:16:5: error: ‘boo’ was not declared in this scope; did you mean ‘bool’?
+   16 |     boo c = "fool" < s;
+      |     ^~~
+      |     bool
+drill-04-09.cpp:18:9: error: ‘c’ was not declared in this scope
+   18 |     if (c)
+      |         ^
