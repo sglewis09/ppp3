@@ -1,0 +1,9 @@
+drill-04-05.cpp: In function ‘int main()’:
+drill-04-05.cpp:15:18: error: conversion from ‘int’ to non-scalar type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} requested
+   15 |     string res = 7;
+      |                  ^
+drill-04-05.cpp:17:12: error: cannot convert ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘int’ in assignment
+   17 |     v[5] = res;
+      |            ^~~
+      |            |
+      |            std::string {aka std::__cxx11::basic_string<char>}
