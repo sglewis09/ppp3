@@ -1,0 +1,4 @@
+drill-04-07.cpp: In function ‘int main()’:
+drill-04-07.cpp:15:9: error: ‘cond’ was not declared in this scope
+   15 |     if (cond)
+      |         ^~~~
