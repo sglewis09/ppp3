@@ -13,8 +13,8 @@
 int main() {
   try {
     cout << "Success"
-         << !\n "
-            return 0;
+         << "!\n";
+    return 0;
   }
 
   catch (exception &e) {
