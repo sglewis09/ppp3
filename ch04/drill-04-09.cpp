@@ -12,8 +12,7 @@
 
 int main() {
   try {
-    string s = "ape";
-    boo c = "fool" < s;
+    bool c = true;
 
     if (c)
       cout << "Success!\n";
