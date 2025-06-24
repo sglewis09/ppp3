@@ -1,0 +1,10 @@
+drill-04-02.cpp:15:13: warning: missing terminating " character
+   15 |     cout << "Success!\n;
+      |             ^
+drill-04-02.cpp:15:13: error: missing terminating " character
+   15 |     cout << "Success!\n;
+      |             ^~~~~~~~~~~~
+drill-04-02.cpp: In function ‘int main()’:
+drill-04-02.cpp:16:9: error: expected primary-expression before ‘return’
+   16 |         return 0;
+      |         ^~~~~~
