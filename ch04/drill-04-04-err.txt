@@ -1,0 +1,5 @@
+drill-04-04.cpp: In function ‘int main()’:
+drill-04-04.cpp:15:13: error: ‘success’ was not declared in this scope; did you mean ‘eaccess’?
+   15 |     cout << success << '\n';
+      |             ^~~~~~~
+      |             eaccess
