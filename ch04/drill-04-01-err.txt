@@ -1,0 +1,4 @@
+drill-04-01.cpp: In function ‘int main()’:
+drill-04-01.cpp:15:5: error: ‘Cout’ was not declared in this scope
+   15 |     Cout << "Success!\n";
+      |     ^~~~
