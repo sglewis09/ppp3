@@ -1,0 +1,7 @@
+drill-04-06.cpp: In function ‘int main()’:
+drill-04-06.cpp:16:6: error: no match for call to ‘(PPP::Checked_vector<int>) (int)’
+   16 |     v(5) = 7;
+      |     ~^~~
+drill-04-06.cpp:17:10: error: no match for call to ‘(PPP::Checked_vector<int>) (int)’
+   17 |     if (v(5) != 7)
+      |         ~^~~
