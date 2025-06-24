@@ -12,8 +12,8 @@
 
 int main() {
   try {
-    string res = 7;
-    vector<int> v(10);
+    string res = "7";
+    vector<string> v(10);
     v[5] = res;
     cout << "Success!\n";
     return 0;
