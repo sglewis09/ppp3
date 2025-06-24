@@ -12,7 +12,7 @@
 
 int main() {
   try {
-    bool c = false;
+    bool c = true;
 
     if (c)
       cout << "Sucess!\n";
