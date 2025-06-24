@@ -1,0 +1,12 @@
+drill-04-03.cpp:16:14: error: stray ‘\’ in program
+   16 |          << !\n "
+      |              ^
+drill-04-03.cpp:16:17: warning: missing terminating " character
+   16 |          << !\n "
+      |                 ^
+drill-04-03.cpp:16:17: error: missing terminating " character
+drill-04-03.cpp: In function ‘int main()’:
+drill-04-03.cpp:16:15: error: ‘n’ was not declared in this scope; did you mean ‘yn’?
+   16 |          << !\n "
+      |               ^
+      |               yn
